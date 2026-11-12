@@ -67,7 +67,7 @@ class App:
 
         Button(self.ventana, text="::Regresar::",command=self.menuAcciones).pack(pady=5)
 
-        Button(self.ventana, text="::Agregar::",command=self.insertar_coche_controller).pack(pady=5)
+        Button(self.ventana, text="::Agregar::",command=lambda:{self.insertar_coche_controller(),self.insertar_coches_view()}).pack(pady=5)
 
     def borrar_coches_view(self):
 
@@ -82,7 +82,7 @@ class App:
 
         Button(self.ventana, text="::Regresar::",command=self.menuAcciones).pack(pady=5)
         
-        Button(self.ventana, text="::Borrar::",command=self.borrar_coche_controller).pack(pady=5)
+        Button(self.ventana, text="::Borrar::",command=lambda:{self.borrar_coche_controller(),self.borrar_coches_view()}).pack(pady=5)
 
     def actualizar_coches_view(self):
         self.borrarPantalla()
@@ -119,7 +119,7 @@ class App:
         
         Button(self.ventana, text="::Regresar::",command=self.menuAcciones).pack(pady=5)
         
-        Button(self.ventana, text="::Actualizar::",command=self.actualizar_coche_controller).pack(pady=5)
+        Button(self.ventana, text="::Actualizar::",command=lambda:{self.actualizar_coche_controller(),self.actualizar_coches_view()}).pack(pady=5)
 
     def mostrar_coches_view(self):
         self.borrarPantalla()
